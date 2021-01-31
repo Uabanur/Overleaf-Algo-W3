@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath, amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+
+
+\begin{document}
+\begin{center}
+{{\Large \sc Algorithms and Data Structures 02105+02326}}
+\end{center}
+\rule{\textwidth}{1pt}
+\begin{description}
+\item[Student name and id:] Roar Nind Steffensen (s144107)
+\item[Teaching assistant:] Martin Hemmingsen
+\item[Hand-in for week:] 3
+\end{description}
+\rule{\textwidth}{1pt}
+ 
+
+\section*{Exercise M.1}
+The functions are arranged from lowest time complexity to highest time complexity:
+\begin{enumerate}
+    \item $5000 \log_2 n$
+    \item $n^{1/100}$
+    \item $\sqrt{n}+7$
+    \item $\dfrac{n}{\log_2 n}$
+    \item $8n$
+    \item $4 n \log_2 n$
+    \item $\dfrac{1}{4}n^2 - 10000 n$
+\end{enumerate}
+
+
+\section*{Exercise M.2}
+
+For the following calculations, only the most critical part of the expressons are calculated.
+
+\textsc{Alg1}(n):
+The running time is calculated as: 
+\begin{gather*}
+    \sum_{i=1}^{n} \left( \sum_{j=1}^{n/2} c_0 \right) = c_0 n \cdot \dfrac{n}{2}
+\end{gather*}
+
+Giving a time complexity of $\Theta(n^2)$.
+
+
+\textsc{Alg2}(n):
+The running time is calculated as: 
+\begin{gather*}
+    \sum_{i=1}^{n} c_1  +  \sum_{j=1}^{n} c_2  = c_1 n + c_2 n
+\end{gather*}
+
+Giving a time complexity of $\Theta(n)$.
+
+\textsc{Alg3}(n):
+The running time is calculated as: 
+
+\begin{gather*}
+    \sum_{i=1}^{n} \left( \sum_{j=1}^{n} \left( \sum_{k=\log_3 j}^{\log_3 n} c_3 \right) \right) = c_3 n \cdot n \cdot \log_3 n
+\end{gather*}
+
+Giving a time complexity of $\Theta(n^2\log n)$.
+
+\end{document}
